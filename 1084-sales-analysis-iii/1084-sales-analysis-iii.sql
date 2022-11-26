@@ -1,6 +1,6 @@
 # Write your MySQL query statement below
-SELECT p.product_id, p.product_name 
-FROM Product as p
+SELECT product_id, product_name 
+FROM Product 
 WHERE product_id IN
     (
         SELECT s.product_id
