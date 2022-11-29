@@ -7,4 +7,3 @@ HAVING SUM(PRICE) >= all(
                             FROM Sales
                             GROUP BY seller_id
                         )
-ORDER BY seller_id DESC
