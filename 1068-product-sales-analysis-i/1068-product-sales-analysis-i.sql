@@ -1,7 +1,7 @@
 # Write your MySQL query statement below
 SELECT p.product_name, s.year, s.price 
 FROM Product as p 
-JOIN 
+RIGHT JOIN 
     (
         SELECT DISTINCT product_id, year, price 
         FROM Sales
