@@ -5,7 +5,7 @@ CASE    WHEN AVG(weather_state)<=15 THEN "Cold"
         ELSE "Warm" 
         END as weather_type 
 FROM Countries as a
-INNER JOIN Weather as b
+JOIN Weather as b
 ON a.country_id=b.country_id
 WHERE b.day BETWEEN "2019-11-01" AND "2019-11-30"
 GROUP BY a.country_id;
