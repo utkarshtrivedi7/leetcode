@@ -1,8 +1,7 @@
 # Write your MySQL query statement below
 select seller_name 
-from seller 
-where seller_name not in (select distinct s.seller_name 
-                          from seller s,orders o 
-                          where o.seller_id = s.seller_id 
-                          and o.sale_date like '2020%' ) 
-order by seller_name asc
+from Seller s
+left join Orders o 
+on s.seller_id = o.seller_id and left(sale_date, 4) = '2020'
+where o.seller_id is null
+order by seller_name  
